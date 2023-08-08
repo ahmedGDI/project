@@ -1,49 +1,164 @@
-button {
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
+
+#increaseTirednessButton,
+#decreaseTirednessButton,
+#increaseHungerButton,
+#decreaseHungerButton,
+#increaseLonelinessButton,
+#decreaseLonelinessButton,
+#increaseHappinessButton,
+#decreaseHappinessButton {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
   --color: #373B44;
   
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
   background:
-    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0)
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
     var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
+  outline-offset: .6em;
   font-size: 16px;
+
   border: 0;
+
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  cursor: pointer;
-  margin: 5px;
 }
 
-button:hover,
-button:focus-visible {
+#increaseTirednessButton:hover,
+#increaseTirednessButton:focus-visible{
   --_p: 0px;
   outline-color: var(--color);
-  outline-offset: 0.05em;
+  outline-offset: .05em;
 }
 
-button:active {
+#increaseTirednessButton:active {
   background: var(--color);
   color: #fff;
 }
 
-/* Image container styling */
-#emotionImageContainer {
-  display: grid;
-  text-align: center;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+
+
+#decreaseTirednessButton:hover,
+#decreaseTirednessButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
 }
 
-/* Image styling */
-#emotionImageContainer img {
+#decreaseTirednessButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+
+
+
+#increaseHungerButton:hover,
+#increaseHungerButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#increaseHungerButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+#decreaseHungerButton:hover,
+#decreaseHungerButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#decreaseHungerButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+#increaseLonelinessButton:hover,
+#increaseLonelinessButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#increaseLonelinessButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+#decreaseLonelinessButton:hover,
+#decreaseLonelinessButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#decreaseLonelinessButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+#increaseHappinessButton:hover,
+#increaseHappinessButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#increaseHappinessButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+#decreaseHappinessButton:hover,
+#decreaseHappinessButton:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#decreaseHappinessButton:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+
+#emotionImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+#tiredImage,
+#energiticImage,
+#hungerImage,
+#feedImage,
+#happinessImage,
+#sadImage,
+#lonelinessImage,
+#notLonlyImage {
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 10px;
@@ -51,46 +166,30 @@ button:active {
   transition: transform 0.3s, border-color 0.3s;
 }
 
-#emotionImageContainer img:hover {
+
+
+
+#tiredImage:hover,
+#energiticImage:hover,
+#hungerImage:hover,
+#feedImage:hover,
+#happinessImage:hover,
+#sadImage:hover,
+#lonelinessImage:hover,
+#notLonlyImage:hover {
   transform: scale(1.05);
   border-color: #3498db;
 }
 
 
+body{
+  background-image: url(https://media0.giphy.com/media/GeimqsH0TLDt4tScGw/200w.webp?cid=ecf05e47yy3rwew9j816vrruw73b6y08jrhzfrkupeu90w0m&ep=v1_gifs_related&rid=200w.webp&ct=g);
+background-repeat:no-repeat ;
+background-size: cover;
 
-/* Button styling */
-button {
-  /* ... your existing button styles ... */
-  background-color: #f4f4f4;
-  background-image: linear-gradient(to bottom, #f4f4f4, #ddd);
 }
 
-button:hover,
-button:focus-visible {
-  /* ... your existing button hover/focus-visible styles ... */
-  background-image: linear-gradient(to bottom, #ddd, #ccc);
-}
 
-button:active {
-  /* ... your existing button active styles ... */
-  background-color: #3498db;
-  color: #fff;
-}
 
-/* Image container styling */
-#emotionImageContainer {
-  /* ... your existing image container styles ... */
-  background-color: #f9f9f9;
-  padding: 20px;
-}
 
-/* Image styling */
-#emotionImageContainer img {
-  /* ... your existing image styles ... */
-  background-color: #fff;
-}
 
-#emotionImageContainer img:hover {
-  /* ... your existing image hover styles ... */
-  background-color: #f4f4f4;
-}
