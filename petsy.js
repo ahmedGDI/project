@@ -286,10 +286,10 @@ function checkCatStatus(cat) {
 
 
 function displayEmotionImage(imageId) {
-    // Hide all images
+    // hide all images
     $("#emotionImageContainer img").hide();
     
-    // Show the image 
+    // show the image 
     $("#" + imageId).show();
 }
 

@@ -22,7 +22,7 @@
   outline: var(--b) solid #0000;
   outline-offset: .6em;
   font-size: 16px;
-
+color: red;
   border: 0;
 
   user-select: none;
