@@ -1,4 +1,4 @@
-function representCat(){
+function RepresentCat(){
     var obj = {}
     
     obj.number1 = 50
@@ -78,7 +78,7 @@ var happiness = function(count){
 // applying an instant cat to manipulate all of the button linked with jQ  
  
 $(document).ready(function() {
-    var cat = representCat(); 
+    var cat = RepresentCat(); 
   
     
     function updateAttributeDisplay(attribute, value) {
